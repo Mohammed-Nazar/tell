@@ -30,7 +30,9 @@ const Message = ({ image, name }) => {
         .then((response) => response.json())
         .then((data) => {
             setWarn(false);
-            data.ok? setSeccess(true): setSeccess(false)    
+            data.ok? setSeccess(true): setSeccess(false) ;
+            setMessage("")
+
         });
        }
   };
