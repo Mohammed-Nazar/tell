@@ -29,7 +29,7 @@ export default function Home() {
   getPhotoId();
 
  async function getPhotoPath(id) {
-    const response = await fetch(`https://api.telegram.org/bot6377644052:AAEL86i0Y7xvWosNvBLofDKMp1QlNWx09lE/getFile?file_id=${id}`);
+    const response = await fetch(`https://api.telegram.org/bot${token}/getFile?file_id=${id}`);
     const data = await response.json();
   setImage(`https://api.telegram.org/file/bot${token}/${data.result.file_path}`)
   setLoading(false)
