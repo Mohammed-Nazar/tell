@@ -64,6 +64,7 @@ const Message = ({ image, name }) => {
             </svg>
           </div>
           <input
+          placeholder="Enter your message!"
             onChange={handleMessageChange}
             className="ml-3 text-sm font-normal px-2 py-1 outline-none text-blue-800"
           />
