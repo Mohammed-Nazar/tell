@@ -2,8 +2,10 @@
 import Message from "./components/Message";
 import { useState } from "react";
 import Loading from "./components/Loading";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  
   const [imagePc, setImage] = useState("")
   const [botName, setName] = useState("")
   const [loading, setLoading] = useState(true)

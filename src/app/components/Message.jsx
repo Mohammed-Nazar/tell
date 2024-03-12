@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+
 
 const Message = ({ image, name }) => {
     const token = process.env.NEXT_PUBLIC_TOKEN;
     const sudo = process.env.NEXT_PUBLIC_SUDO;
-
+    const router = useRouter();
   const [message, setMessage] = useState("");
   const [warnAlert, setWarn] = useState(false);
   const [success, setSeccess] = useState(false);
@@ -68,6 +70,7 @@ const Message = ({ image, name }) => {
           <input
           placeholder="Enter your message!"
             onChange={handleMessageChange}
+            value={message}
             className="ml-3 text-sm font-normal px-2 py-1 outline-none text-blue-800"
           />
           
